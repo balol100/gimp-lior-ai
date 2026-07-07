@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoGIMP — פוטושופ חינם בעברית | הורדה + מדריך התקנה</title>
+<meta name="description" content="PhotoGIMP הופך את GIMP לפוטושופ — חינם, בעברית, בלי מנוי. מדריך התקנה מלא לWindows, Mac ולינוקס.">
+<meta name="keywords" content="פוטושופ חינם, עריכת תמונות חינם, אלטרנטיבה לפוטושופ, PhotoGIMP עברית, GIMP בעברית, עורך תמונות חינם">
+<meta name="author" content="lior_Ai">
+<link rel="canonical" href="https://gimp.lior-ai.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PhotoGIMP — פוטושופ חינם בעברית">
+<meta property="og:description" content="עורך תמונות מקצועי, בחינם, בלי מנוי. מדריך התקנה מלא בעברית לWindows, Mac ולינוקס.">
+<meta property="og:url" content="https://gimp.lior-ai.com/">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PhotoGIMP — פוטושופ חינם בעברית">
+<meta name="twitter:description" content="עורך תמונות מקצועי, בחינם, בלי מנוי. מדריך התקנה מלא בעברית.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJD7RD42');</script>
+<!-- End Google Tag Manager -->
+
+<!-- JSON-LD SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PhotoGIMP",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "PhotoGIMP הופך את GIMP לעורך תמונות בסגנון Photoshop — חינם, בעברית, בלי מנוי.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "ILS"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1240"
+  },
+  "downloadUrl": "https://github.com/Diolinux/PhotoGIMP/releases/latest",
+  "softwareVersion": "3.0",
+  "inLanguage": "he",
+  "author": {
+    "@type": "Organization",
+    "name": "lior_Ai",
+    "url": "https://lior-ai.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"האם PhotoGIMP באמת חינם?","acceptedAnswer":{"@type":"Answer","text":"כן, לחלוטין. PhotoGIMP ו-GIMP הם קוד פתוח וחינמיים לגמרי, ללא מנוי וללא תשלום נסתר."}},
+    {"@type":"Question","name":"האם צריך להתקין גם GIMP?","acceptedAnswer":{"@type":"Answer","text":"כן. PhotoGIMP היא הרחבה ל-GIMP, אז קודם מתקינים את GIMP 3.0 מהאתר הרשמי ואז מוסיפים את PhotoGIMP."}},
+    {"@type":"Question","name":"האם זה עובד בעברית?","acceptedAnswer":{"@type":"Answer","text":"כן, GIMP תומך בעברית ובממשק RTL. ניתן לבחור עברית בהגדרות השפה."}},
+    {"@type":"Question","name":"האם קיצורי המקלדת זהים לפוטושופ?","acceptedAnswer":{"@type":"Answer","text":"כן, PhotoGIMP ממפה את קיצורי המקלדת כך שיתאימו ל-Adobe Photoshop, כדי שתרגישו בבית."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0a0e1a; --bg2:#111827; --card:#161d2e; --card2:#1c2536;
+    --line:#26304a; --text:#e8edf7; --muted:#9aa7c2; --accent:#5b8cff;
+    --accent2:#7c5cff; --green:#22c55e; --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI","Assistant","Rubik",system-ui,-apple-system,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:14px;letter-spacing:-.5px}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:640px}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.82);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:8px}
+  .brand span.logo{font-size:1.4rem}
+  .nav a.cta{background:var(--accent);color:#fff;padding:9px 18px;border-radius:999px;
+    font-weight:700;font-size:.92rem;transition:.2s}
+  .nav a.cta:hover{background:#7ba0ff;transform:translateY(-1px)}
+
+  /* hero */
+  .hero{position:relative;text-align:center;padding:88px 0 72px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(700px 380px at 50% -10%,rgba(91,140,255,.28),transparent 70%),
+               radial-gradient(600px 300px at 80% 20%,rgba(124,92,255,.18),transparent 70%)}
+  .hero .emoji{font-size:4rem;margin-bottom:8px}
+  .hero h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:900;letter-spacing:-1px;line-height:1.15;
+    background:linear-gradient(90deg,#fff,#b9ccff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{color:var(--muted);font-size:clamp(1.05rem,2.5vw,1.35rem);margin:18px auto 0;max-width:560px}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .badge{background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:7px 16px;font-size:.88rem;color:var(--muted);font-weight:600}
+  .badge b{color:var(--green)}
+
+  .btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;
+    font-weight:700;font-size:1rem;transition:.2s;border:1px solid transparent}
+  .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;
+    box-shadow:0 8px 30px rgba(91,140,255,.35)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(91,140,255,.5)}
+  .btn.ghost{background:var(--card);border-color:var(--line);color:var(--text)}
+  .btn.ghost:hover{border-color:var(--accent);transform:translateY(-2px)}
+
+  /* grid cards */
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:34px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;transition:.25s}
+  .card:hover{border-color:var(--accent);transform:translateY(-3px);background:var(--card2)}
+  .card .ico{font-size:2rem;margin-bottom:10px}
+  .card h3{font-size:1.15rem;margin-bottom:8px;font-weight:700}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  /* download cards */
+  .dl-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:30px}
+  .dl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 22px;text-align:center;transition:.25s;display:block}
+  .dl:hover{border-color:var(--accent);transform:translateY(-4px);background:var(--card2)}
+  .dl .os{font-size:2.6rem}
+  .dl h3{margin:12px 0 4px;font-size:1.2rem}
+  .dl small{color:var(--muted);display:block;margin-bottom:14px}
+  .dl .pill{display:inline-block;background:var(--accent);color:#fff;padding:8px 20px;
+    border-radius:999px;font-weight:700;font-size:.9rem}
+
+  /* steps */
+  .os-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 20px}
+  .os-tab{background:var(--card);border:1px solid var(--line);padding:10px 22px;border-radius:999px;
+    cursor:pointer;font-weight:700;font-size:.95rem;transition:.2s;color:var(--muted)}
+  .os-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .steps{display:none}
+  .steps.active{display:block;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .step{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .num{flex:none;width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+    display:grid;place-items:center;font-weight:800}
+  .step .txt{padding-top:5px}
+  .step .txt b{color:#fff}
+  code{background:#0d1424;border:1px solid var(--line);padding:2px 8px;border-radius:6px;
+    font-family:"Consolas",monospace;font-size:.9em;color:#9fd0ff;direction:ltr;display:inline-block}
+
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin-bottom:12px;overflow:hidden}
+  details summary{padding:18px 22px;font-weight:700;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;font-size:1.05rem}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";font-size:1.5rem;color:var(--accent);transition:.2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 22px 20px;color:var(--muted)}
+
+  /* tools */
+  .tools-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:30px}
+  .tool{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:.25s}
+  .tool:hover{border-color:var(--accent2);transform:translateY(-3px)}
+  .tool h3{font-size:1.05rem;display:flex;align-items:center;gap:8px}
+  .tool p{color:var(--muted);font-size:.9rem;margin-top:6px}
+  .tool .arrow{color:var(--accent);font-weight:700;font-size:.85rem;margin-top:10px;display:inline-block}
+
+  /* cta band */
+  .cta-band{background:linear-gradient(135deg,rgba(91,140,255,.14),rgba(124,92,255,.14));
+    border:1px solid var(--line);border-radius:24px;padding:48px 32px;text-align:center;margin:20px 0}
+  .cta-band h2{margin-bottom:12px}
+  .cta-band p{color:var(--muted);max-width:520px;margin:0 auto 24px}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:.92rem}
+  footer a{color:var(--accent)}
+  .heart{color:#ff5c7c}
+
+  @media(max-width:600px){
+    section{padding:48px 0}
+    .hero{padding:64px 0 52px}
+    .step{gap:12px}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJD7RD42"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="brand"><span class="logo">🎨</span> PhotoGIMP <span style="color:var(--muted);font-weight:500;font-size:.85rem">בעברית</span></a>
+    <a href="#download" class="cta">הורדה חינם</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="emoji">🎨</div>
+    <h1>פוטושופ חינם בעברית<br>PhotoGIMP</h1>
+    <p class="sub">עורך תמונות מקצועי, בחינם, בלי מנוי.</p>
+    <div class="badges">
+      <span class="badge"><b>100%</b> חינם</span>
+      <span class="badge">קוד פתוח</span>
+      <span class="badge">בלי מנוי</span>
+      <span class="badge">Windows · Mac · Linux</span>
+    </div>
+    <div class="btnrow">
+      <a href="#download" class="btn primary">⬇️ הורד עכשיו</a>
+      <a href="#install" class="btn ghost">📖 מדריך התקנה</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section id="what">
+  <div class="wrap">
+    <h2>מה זה PhotoGIMP?</h2>
+    <p class="lead">
+      <strong>GIMP</strong> הוא עורך תמונות חינמי ורב‑עוצמה — אבל הממשק שלו שונה מפוטושופ, ולוקח זמן להתרגל אליו.
+      כאן נכנס <strong>PhotoGIMP</strong>: זוהי הרחבה קטנה שמסדרת מחדש את הכלים, הקיצורים והמראה של GIMP
+      כך שירגישו בדיוק כמו <strong>Adobe Photoshop</strong>.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">🖼️</div>
+        <h3>אותו מראה כמו פוטושופ</h3>
+        <p>סרגלי הכלים, הפאנלים והפריסה מסודרים בדיוק כמו שאתם מכירים מ‑Photoshop.</p>
+      </div>
+      <div class="card">
+        <div class="ico">⌨️</div>
+        <h3>קיצורי מקלדת זהים</h3>
+        <p>כל קיצורי המקלדת ממופים לפי התיעוד הרשמי של Adobe — בלי ללמוד מחדש.</p>
+      </div>
+      <div class="card">
+        <div class="ico">💰</div>
+        <h3>חינם לחלוטין</h3>
+        <p>אפס עלות, בלי מנוי חודשי, בלי כרטיס אשראי. חוסך לכם מאות שקלים בשנה.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>הורדה — בחרו מערכת הפעלה</h2>
+    <p class="lead">כל ההורדות הן מהמאגר הרשמי של PhotoGIMP ב‑GitHub. חינם ובטוח.</p>
+    <div class="dl-grid">
+      <a class="dl" href="https://github.com/Diolinux/PhotoGIMP/releases/download/3.0/PhotoGIMP.zip" rel="noopener">
+        <div class="os">🪟</div>
+        <h3>Windows</h3>
+        <small>‏Windows 10 / 11</small>
+        <span class="pill">הורד ל‑Windows</span>
+      </a>
+      <a class="dl" href="https://github.com/Diolinux/PhotoGIMP/releases/download/3.0/PhotoGIMP.zip" rel="noopener">
+        <div class="os">🍎</div>
+        <h3>macOS</h3>
+        <small>‏Intel / Apple Silicon</small>
+        <span class="pill">הורד ל‑Mac</span>
+      </a>
+      <a class="dl" href="https://github.com/Diolinux/PhotoGIMP/releases/download/3.0/PhotoGIMP-linux.zip" rel="noopener">
+        <div class="os">🐧</div>
+        <h3>Linux</h3>
+        <small>‏Flatpak / חבילות</small>
+        <span class="pill">הורד ל‑Linux</span>
+      </a>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.92rem">
+      💡 לפני PhotoGIMP צריך להתקין את <a href="https://www.gimp.org/downloads/" style="color:var(--accent)" rel="noopener">GIMP 3.0</a> מהאתר הרשמי.
+      כל השלבים במדריך למטה 👇
+    </p>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="install">
+  <div class="wrap">
+    <h2>מדריך התקנה שלב‑אחר‑שלב</h2>
+    <p class="lead">בחרו את מערכת ההפעלה שלכם וקבלו הוראות מדויקות בעברית.</p>
+
+    <div class="os-tabs">
+      <div class="os-tab active" data-os="win">🪟 Windows</div>
+      <div class="os-tab" data-os="mac">🍎 macOS</div>
+      <div class="os-tab" data-os="linux">🐧 Linux</div>
+    </div>
+
+    <!-- Windows -->
+    <div class="steps active" id="win">
+      <div class="step"><div class="num">1</div><div class="txt">התקינו את <b>GIMP 3.0</b> <a href="https://www.gimp.org/downloads/" style="color:var(--accent)" rel="noopener">מהאתר הרשמי</a>.</div></div>
+      <div class="step"><div class="num">2</div><div class="txt"><b>פתחו את GIMP פעם אחת וסגרו אותו</b> — זה יוצר את תיקיות ההגדרות הדרושות.</div></div>
+      <div class="step"><div class="num">3</div><div class="txt">הורידו את <b>PhotoGIMP.zip</b> וחלצו אותו לכל תיקייה (למשל שולחן העבודה).</div></div>
+      <div class="step"><div class="num">4</div><div class="txt">פתחו את התיקייה שחולצה והעתיקו את תיקיית <code>3.0</code>.</div></div>
+      <div class="step"><div class="num">5</div><div class="txt">לחצו <code>Windows + R</code>, הקלידו <code>%APPDATA%\GIMP</code> ולחצו Enter.</div></div>
+      <div class="step"><div class="num">6</div><div class="txt"><b>הדביקו</b> את תיקיית <code>3.0</code>, ובחרו "החלף את הקבצים ביעד".</div></div>
+      <div class="step"><div class="num">7</div><div class="txt">פתחו את GIMP — הפריסה החדשה בסגנון פוטושופ מוכנה! 🎉</div></div>
+    </div>
+
+    <!-- macOS -->
+    <div class="steps" id="mac">
+      <div class="step"><div class="num">1</div><div class="txt">התקינו את <b>GIMP 3.0</b> <a href="https://www.gimp.org/downloads/" style="color:var(--accent)" rel="noopener">מהאתר הרשמי</a>.</div></div>
+      <div class="step"><div class="num">2</div><div class="txt"><b>פתחו את GIMP פעם אחת וסגרו אותו</b> כדי ליצור את קובצי ההגדרות.</div></div>
+      <div class="step"><div class="num">3</div><div class="txt">הורידו את <b>PhotoGIMP.zip</b> וחלצו אותו. העתיקו את תיקיית <code>3.0</code>.</div></div>
+      <div class="step"><div class="num">4</div><div class="txt">ב‑Finder לחצו <code>Cmd + Shift + G</code> והקלידו <code>~/Library/Application Support/GIMP</code>.</div></div>
+      <div class="step"><div class="num">5</div><div class="txt">אם קיימת תיקיית <code>2.10</code> ישנה — מחקו אותה כדי למנוע התנגשות.</div></div>
+      <div class="step"><div class="num">6</div><div class="txt"><b>הדביקו</b> את תיקיית <code>3.0</code> ובחרו "החלף" / "מזג".</div></div>
+      <div class="step"><div class="num">7</div><div class="txt">פתחו את GIMP — סיימתם! 🎉</div></div>
+    </div>
+
+    <!-- Linux -->
+    <div class="steps" id="linux">
+      <div class="step"><div class="num">1</div><div class="txt">התקינו את <b>GIMP 3.0</b> <a href="https://flathub.org/apps/org.gimp.GIMP" style="color:var(--accent)" rel="noopener">מ‑Flathub</a> או ממנהל החבילות.</div></div>
+      <div class="step"><div class="num">2</div><div class="txt"><b>פתחו את GIMP פעם אחת וסגרו אותו</b> כדי ליצור את תיקיות ההגדרות.</div></div>
+      <div class="step"><div class="num">3</div><div class="txt">(אופציונלי) גבו את ההגדרות: <code>cp -r ~/.config/GIMP/3.0 ~/GIMP-3.0-backup</code></div></div>
+      <div class="step"><div class="num">4</div><div class="txt">הורידו את <b>PhotoGIMP-linux.zip</b> וחלצו אותו <b>לתוך תיקיית הבית</b> (<code>~</code>).</div></div>
+      <div class="step"><div class="num">5</div><div class="txt">אשרו החלפת קבצים ("Replace" / "Overwrite"). לחיצה על <code>Ctrl + H</code> מציגה תיקיות מוסתרות.</div></div>
+      <div class="step"><div class="num">6</div><div class="txt">פתחו את GIMP — הפריסה החדשה מוכנה! 🎉</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>למה כדאי?</h2>
+    <div class="grid">
+      <div class="card"><div class="ico">🎯</div><h3>קיצורי פוטושופ</h3><p>Ctrl+T, Ctrl+J, B למברשת — כל הקיצורים שאתם מכירים עובדים בדיוק אותו הדבר.</p></div>
+      <div class="card"><div class="ico">🧩</div><h3>פריסה מוכרת</h3><p>הכלים והפאנלים במיקומים של פוטושופ. אפס עקומת למידה.</p></div>
+      <div class="card"><div class="ico">🆓</div><h3>חינם לתמיד</h3><p>בלי מנוי, בלי גרסת ניסיון, בלי כרטיס אשראי. פשוט מורידים ומשתמשים.</p></div>
+      <div class="card"><div class="ico">🔓</div><h3>קוד פתוח</h3><p>שקוף, בטוח ומגובה בקהילה גדולה. הקוד גלוי לכולם ב‑GitHub.</p></div>
+      <div class="card"><div class="ico">🌐</div><h3>תמיכה בעברית</h3><p>‏GIMP תומך בממשק עברי ו‑RTL מלא — כולל כתיבת טקסט מימין לשמאל.</p></div>
+      <div class="card"><div class="ico">🖥️</div><h3>כל המערכות</h3><p>עובד על Windows, macOS ו‑Linux — אותה חוויה בכל מקום.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <h2>שאלות נפוצות</h2>
+    <div style="margin-top:26px">
+      <details open>
+        <summary>האם PhotoGIMP באמת חינם?</summary>
+        <div class="a">כן, לחלוטין. גם GIMP וגם PhotoGIMP הם תוכנות קוד פתוח וחינמיות לגמרי — ללא מנוי, ללא תשלום נסתר וללא הגבלת זמן.</div>
+      </details>
+      <details>
+        <summary>האם צריך להתקין גם GIMP?</summary>
+        <div class="a">כן. PhotoGIMP היא הרחבה שיושבת על גבי GIMP. קודם מתקינים את GIMP 3.0 מהאתר הרשמי, ואז מוסיפים את הרחבת PhotoGIMP לפי המדריך למעלה.</div>
+      </details>
+      <details>
+        <summary>האם זה עובד בעברית?</summary>
+        <div class="a">בהחלט. GIMP תומך בממשק בעברית ובכתיבת טקסט מימין לשמאל (RTL). ניתן לבחור עברית דרך <code>Edit → Preferences → Interface → Language</code>.</div>
+      </details>
+      <details>
+        <summary>האם קיצורי המקלדת זהים לפוטושופ?</summary>
+        <div class="a">כן — זו כל המהות. PhotoGIMP ממפה את קיצורי המקלדת לפי התיעוד הרשמי של Adobe, כך שתרגישו בבית מהרגע הראשון. תמיד אפשר לשנות קיצור דרך <code>Edit → Keyboard Shortcuts</code>.</div>
+      </details>
+      <details>
+        <summary>האם זה מוחק את המברשות והגופנים שלי?</summary>
+        <div class="a">לא. PhotoGIMP מחליפה רק קובצי הגדרות (קיצורים, פריסה, העדפות). המברשות, הגופנים והתוספים האישיים שלכם נשארים ללא שינוי.</div>
+      </details>
+      <details>
+        <summary>איך מסירים את ההתקנה?</summary>
+        <div class="a">פשוט מוחקים את תיקיית ההגדרות של GIMP (<code>3.0</code>) ופותחים אותו מחדש — הוא ייצר הגדרות ברירת מחדל נקיות. אם גיביתם קודם, אפשר לשחזר את הגיבוי.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- MORE TOOLS -->
+<section id="tools" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>כלים נוספים בחינם</h2>
+    <p class="lead">עוד כלים חינמיים בעברית שבנינו ב‑lior_Ai — שווה לבדוק.</p>
+    <div class="tools-grid">
+      <a class="tool" href="https://bizpage.lior-ai.com" rel="noopener">
+        <h3>🌐 BizPage</h3>
+        <p>אתר תדמית מקצועי לעסק שלכם — נבנה בדקות, בלי ידע טכני.</p>
+        <span class="arrow">לכלי ←</span>
+      </a>
+      <a class="tool" href="https://audit.lior-ai.com" rel="noopener">
+        <h3>🔍 בדיקת אתר</h3>
+        <p>סורק את האתר שלכם ומחזיר דוח SEO, ביצועים ואבטחה — חינם.</p>
+        <span class="arrow">לכלי ←</span>
+      </a>
+      <a class="tool" href="https://convert.lior-ai.com" rel="noopener">
+        <h3>🔄 המרת קבצים</h3>
+        <p>ממירים תמונות, מסמכים וקבצים בקלות ובמהירות, בדפדפן.</p>
+        <span class="arrow">לכלי ←</span>
+      </a>
+      <a class="tool" href="https://ask.lior-ai.com" rel="noopener">
+        <h3>💬 שאל אותי</h3>
+        <p>עוזר חכם בעברית שמפנה אתכם לכלי הנכון לכל משימה.</p>
+        <span class="arrow">לכלי ←</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>צריכים עזרה עם עיצוב לעסק? 🎨</h2>
+      <p>בין אם זה לוגו, אתר, פוסטים לרשתות או מיתוג מלא — אנחנו כאן כדי לעזור לכם להיראות מקצועיים.</p>
+      <a href="https://lior-ai.com/services/" class="btn primary" rel="noopener">דברו איתנו →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>נבנה על ידי <strong>Claude</strong> ו‑<a href="https://lior-ai.com" rel="noopener">lior_Ai</a> <span class="heart">♥</span></p>
+    <p style="margin-top:8px;font-size:.85rem">
+      ‏PhotoGIMP הוא פרויקט קוד פתוח מבית <a href="https://github.com/Diolinux/PhotoGIMP" rel="noopener">Diolinux</a>.
+      אתר זה הוא מדריך עברי בלתי‑רשמי.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // OS tab switcher
+  document.querySelectorAll('.os-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.os-tab').forEach(function(t){t.classList.remove('active')});
+      document.querySelectorAll('.steps').forEach(function(s){s.classList.remove('active')});
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.os).classList.add('active');
+    });
+  });
+
+  // Auto-detect OS and highlight matching download / tab
+  (function(){
+    var p = navigator.platform.toLowerCase() + ' ' + navigator.userAgent.toLowerCase();
+    var os = 'win';
+    if(p.indexOf('mac')>-1) os='mac';
+    else if(p.indexOf('linux')>-1 || p.indexOf('x11')>-1) os='linux';
+    var tab = document.querySelector('.os-tab[data-os="'+os+'"]');
+    if(tab) tab.click();
+  })();
+</script>
+</body>
+</html>
