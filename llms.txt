@@ -1,0 +1,12 @@
+# PhotoGIMP בעברית — gimp.lior-ai.com
+
+> מדריך מלא בעברית להפיכת GIMP לחלופת פוטושופ חינמית באמצעות PhotoGIMP: הורדה, התקנה ל-Windows, Mac ולינוקס, וטיפים לשימוש. ללא מנוי וללא עלות.
+
+## עמודים
+- [המדריך בעברית](https://gimp.lior-ai.com/) — הורדה והתקנה צעד-אחר-צעד
+- [English guide](https://gimp.lior-ai.com/en.html)
+- [Русское руководство](https://gimp.lior-ai.com/ru.html)
+- [الدليل بالعربية](https://gimp.lior-ai.com/ar.html)
+
+## קשור
+- [lior-ai.com](https://lior-ai.com) — כלים חינמיים נוספים
